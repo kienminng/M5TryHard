@@ -14,8 +14,8 @@ public class Comment {
     private String content;
     private int rate;
     private Date date;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private User client;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Product product;
 }

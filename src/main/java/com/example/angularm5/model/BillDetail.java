@@ -10,8 +10,8 @@ public class BillDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Bill bill;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private User client;
 }

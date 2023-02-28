@@ -16,6 +16,6 @@ public class User {
     private String address;
     private String phoneNumber;
     private boolean status;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Role role;
 }

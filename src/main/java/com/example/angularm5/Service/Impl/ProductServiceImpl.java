@@ -18,6 +18,10 @@ public class ProductServiceImpl implements IProductService {
         return (List<Product>) productRepo.findAll();
     }
 
+    public List<Product> getAllByCategory_Name(String name){
+        return productRepo.getAllByCategory_Name(name);
+    }
+
     @Override
     public Product save(Product product) {
         return productRepo.save(product);

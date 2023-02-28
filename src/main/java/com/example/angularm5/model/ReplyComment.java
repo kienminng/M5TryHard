@@ -11,8 +11,8 @@ public class ReplyComment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String content;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     Comment comment;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     User user;
 }
