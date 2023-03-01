@@ -35,7 +35,7 @@ public class UserController {
     @PostMapping("/lock/{id}")
     public void lock(@PathVariable int id){
         User user = userService.findById(id);
-        user.setStatus(false);
+        user.setStatus(2);
         userService.save(user);
     }
 

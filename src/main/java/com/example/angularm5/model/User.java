@@ -3,6 +3,7 @@ package com.example.angularm5.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -15,7 +16,7 @@ public class User {
     private String avatar;
     private String address;
     private String phoneNumber;
-    private boolean status;
-    @ManyToOne(fetch = FetchType.EAGER)
-    private Role role;
+    private int status;
+    @ManyToMany(fetch = FetchType.EAGER)
+    private List<Role> role;
 }

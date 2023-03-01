@@ -8,4 +8,5 @@ public interface UserRepo extends PagingAndSortingRepository<User,Integer> {
     @Query("select u from User u where u.username=:username")
     User findByUsername(String username);
 
+
 }

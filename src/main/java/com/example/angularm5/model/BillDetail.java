@@ -14,4 +14,6 @@ public class BillDetail {
     private Bill bill;
     @ManyToOne(fetch = FetchType.EAGER)
     private User client;
+    @ManyToOne
+    private Product product;
 }
